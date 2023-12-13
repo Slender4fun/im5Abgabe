@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.animation-container {
+    margin-left: 50vw;
+    margin-top: 10vh;
+    width: 32px; /* Adjust the width 10 times as per your original sprite size */
+    height: 66px; /* Adjust the height 10 times as per your original sprite size */
+    background: url('Fox_Sprite_Sheet.png') 0 0; /* Adjust the URL and position */
+    animation: playAnimation 2s steps(7) infinite; /* Adjust the animation duration and steps, set it to 'infinite' for continuous looping */
+    transform: scale(2); /* Scale the animation 10 times */
+}
+
+@keyframes playAnimation {
+    0% {
+        background-position: 0 -66px;
+    }
+    50% {
+        background-position: -224px -66px; /* Adjust the final position based on your sprite size */
+    }
+    100% {
+        background-position: 0 -66px;
+    }
+}
